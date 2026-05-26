@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>임신 출산 계산기 | luckygrampus Baby</title>
+    <link>https://baby.luckygrampus.com/</link>
+    <description>출산 예정일 계산기, 임신 주차별 태아 발달 정보, 정부 지원 혜택까지 임산부를 위한 모든 정보를 제공합니다.</description>
+    <language>ko</language>
+    <lastBuildDate>Mon, 26 May 2026 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://baby.luckygrampus.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>임신 출산 계산기 - 출산 예정일 계산</title>
+      <link>https://baby.luckygrampus.com/</link>
+      <description>마지막 생리 시작일 또는 배란일을 입력해 출산 예정일을 계산하고, 현재 임신 주차와 태아 발달 정보를 확인하세요.</description>
+      <pubDate>Sat, 03 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://baby.luckygrampus.com/</guid>
+    </item>
+
+    <item>
+      <title>임신 주차별 태아 발달 가이드</title>
+      <link>https://baby.luckygrampus.com/week.html</link>
+      <description>임신 1주차부터 40주차까지 주차별 태아 크기, 발달 과정, 임산부 몸의 변화와 주의사항을 상세히 안내합니다.</description>
+      <pubDate>Sat, 03 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://baby.luckygrampus.com/week.html</guid>
+    </item>
+
+    <item>
+      <title>임산부 정부 지원 혜택 총정리</title>
+      <link>https://baby.luckygrampus.com/support.html</link>
+      <description>임신·출산 관련 정부 지원금, 바우처, 의료비 지원 등 임산부가 받을 수 있는 모든 혜택을 한눈에 정리했습니다.</description>
+      <pubDate>Sat, 03 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://baby.luckygrampus.com/support.html</guid>
+    </item>
+
+    <item>
+      <title>출산 비용 계산기 및 준비물 체크리스트</title>
+      <link>https://baby.luckygrampus.com/cost.html</link>
+      <description>출산 예상 비용을 계산하고, 출산 전 준비해야 할 물품 체크리스트를 확인하세요.</description>
+      <pubDate>Sat, 03 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://baby.luckygrampus.com/cost.html</guid>
+    </item>
+
+    <item>
+      <title>임신 초기 주의사항 및 건강 가이드</title>
+      <link>https://baby.luckygrampus.com/guide.html</link>
+      <description>임신 초기부터 출산까지 알아야 할 건강 관리법, 음식, 운동, 정기검진 일정을 안내합니다.</description>
+      <pubDate>Sat, 03 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://baby.luckygrampus.com/guide.html</guid>
+    </item>
+
+  </channel>
+</rss>
