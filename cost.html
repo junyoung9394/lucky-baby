@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>육아 비용 계산기 | 분유·기저귀·산후조리원 총비용 2026</title>
+  <meta name="description" content="산후조리원, 분유, 기저귀, 유모차, 카시트 등 아기 1년치 육아 비용을 항목별로 계산해드립니다."/>
+  <meta name="keywords" content="육아 비용, 산후조리원 비용, 분유 비용, 기저귀 비용, 아기 용품 비용"/>
+  <link rel="canonical" href="https://baby.luckygrampus.com/cost.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="임신 가이드 | luckygrampus Baby"/>
+  <meta property="og:title" content="육아 비용 계산기 | 분유·기저귀·산후조리원 총비용 2026"/>
+  <meta property="og:description" content="산후조리원, 분유, 기저귀, 유모차, 카시트 등 아기 1년치 육아 비용을 항목별로 계산해드립니다."/>
+  <meta property="og:url" content="https://baby.luckygrampus.com/cost.html"/>
+  <meta name="twitter:card" content="summary"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8518556382646891" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f0c1a;--surface:#171225;--card:#1e1830;--border:#2d2545;--rose:#e8829a;--rose-light:#f5a8bc;--rose-dim:#a0566a;--rose-bg:rgba(232,130,154,0.08);--text:#f0eaf5;--text-muted:#9a8fb0;--text-dim:#554d6a}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'Pretendard',sans-serif;min-height:100vh;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 15% 10%,rgba(232,130,154,0.07) 0%,transparent 60%);pointer-events:none;z-index:0}
+    nav{background:rgba(15,12,26,0.95);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+    .nav-inner{max-width:720px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:54px}
+    .nav-logo{font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:var(--rose-light);text-decoration:none;white-space:nowrap}
+    .nav-links{display:flex;gap:2px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+    .nav-links::-webkit-scrollbar{display:none}
+    .nav-links a{text-decoration:none;color:var(--text-muted);font-size:12px;padding:5px 10px;border-radius:20px;white-space:nowrap;transition:all 0.2s}
+    .nav-links a:hover,.nav-links a.active{background:var(--rose-bg);color:var(--rose-light)}
+    .container{max-width:720px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+    header{text-align:center;padding:52px 0 32px}
+    .header-ornament{font-size:40px;margin-bottom:12px;display:block;animation:float 4s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    header h1{font-family:'Noto Serif KR',serif;font-size:clamp(22px,5vw,34px);font-weight:700;color:var(--rose-light);letter-spacing:-0.5px}
+    header p{margin-top:10px;color:var(--text-muted);font-size:14px}
+    .rose-line{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--rose),transparent);margin:16px auto 0}
+    .ad-slot{background:var(--surface);border:1px dashed var(--border);border-radius:10px;margin:20px 0;min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px 22px;margin-bottom:14px;position:relative;overflow:hidden}
+    .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--rose-dim),transparent)}
+    .card-title{font-family:'Noto Serif KR',serif;font-size:15px;font-weight:600;color:var(--rose);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+
+    .cost-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--border)}
+    .cost-row:last-child{border-bottom:none}
+    .cost-icon{font-size:20px;flex-shrink:0}
+    .cost-label{flex:1}
+    .cost-name{font-size:14px;font-weight:500;color:var(--text)}
+    .cost-hint{font-size:11px;color:var(--text-dim);margin-top:2px}
+    .cost-input{width:90px;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;color:var(--text);font-size:13px;font-family:'Pretendard',sans-serif;outline:none;text-align:right;transition:border-color 0.2s}
+    .cost-input:focus{border-color:var(--rose-dim)}
+    .cost-unit{font-size:12px;color:var(--text-muted);white-space:nowrap}
+
+    .result-card{background:linear-gradient(135deg,#1a0d1a,#150d20);border:1px solid var(--rose-dim);border-radius:20px;padding:28px 24px;margin:16px 0;position:relative;overflow:hidden}
+    .result-card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(232,130,154,0.07) 0%,transparent 70%);pointer-events:none}
+    .result-label{font-size:11px;color:var(--rose-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;text-align:center}
+    .result-total{font-family:'Noto Serif KR',serif;font-size:clamp(34px,8vw,54px);font-weight:700;color:var(--rose-light);text-align:center;line-height:1}
+    .result-total.pop{animation:pop 0.3s ease}
+    @keyframes pop{0%{transform:scale(0.93)}60%{transform:scale(1.05)}100%{transform:scale(1)}}
+
+    .bar-wrap{background:var(--border);border-radius:6px;height:8px;margin-top:18px;overflow:hidden;display:flex}
+    .bar-seg{height:100%;transition:width 0.5s ease}
+    .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:11px;color:var(--text-muted)}
+    .legend-item{display:flex;align-items:center;gap:4px}
+    .legend-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+
+    .nav-bottom{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+    .nav-btn{flex:1;min-width:120px;padding:13px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text-muted);font-size:13px;font-family:'Pretendard',sans-serif;text-decoration:none;text-align:center;transition:all 0.2s;display:block}
+    .nav-btn:hover{border-color:var(--rose-dim);color:var(--rose-light)}
+    footer{text-align:center;padding:40px 0 20px;color:var(--text-dim);font-size:12px;line-height:2;border-top:1px solid var(--border);margin-top:40px}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">🤰 임신 가이드</a>
+    <div class="nav-links">
+      <a href="index.html">🗓️ 예정일</a>
+      <a href="week.html">👶 주차별</a>
+      <a href="support.html">💰 지원금</a>
+      <a href="cost.html" class="active">🧮 육아비용</a>
+      <a href="guide.html">📖 가이드</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <header>
+    <span class="header-ornament">🧮</span>
+    <h1>육아 비용 계산기</h1>
+    <p>출산 준비부터 1년치 육아비용 총계산</p>
+    <div class="rose-line"></div>
+  </header>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8518556382646891" data-ad-slot="8080905265" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>🏥</span> 출산 준비 비용 (만원)</div>
+    <div id="birth-items">
+      <div class="cost-row"><span class="cost-icon">🏨</span><div class="cost-label"><div class="cost-name">산후조리원</div><div class="cost-hint">2주 기준 평균 150~250만원</div></div><input type="number" class="cost-input" value="200" min="0"> <span class="cost-unit">만원</span></div>
+      <div class="cost-row"><span class="cost-icon">🛏️</span><div class="cost-label"><div class="cost-name">입원비 (분만)</div><div class="cost-hint">자연분만 50~100만원</div></div><input type="number" class="cost-input" value="80" min="0"> <span class="cost-unit">만원</span></div>
+      <div class="cost-row"><span class="cost-icon">👶</span><div class="cost-label"><div class="cost-name">신생아 용품 세트</div><div class="cost-hint">젖병·속싸개·침대 등</div></div><input type="number" class="cost-input" value="100" min="0"> <span class="cost-unit">만원</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>🍼</span> 월 소모품 (월별 × 12개월)</div>
+    <div id="monthly-items">
+      <div class="cost-row"><span class="cost-icon">🍼</span><div class="cost-label"><div class="cost-name">분유</div><div class="cost-hint">월 평균 10~15만원</div></div><input type="number" class="cost-input" value="12" min="0"> <span class="cost-unit">만원/월</span></div>
+      <div class="cost-row"><span class="cost-icon">👶</span><div class="cost-label"><div class="cost-name">기저귀</div><div class="cost-hint">월 평균 5~8만원</div></div><input type="number" class="cost-input" value="6" min="0"> <span class="cost-unit">만원/월</span></div>
+      <div class="cost-row"><span class="cost-icon">🧴</span><div class="cost-label"><div class="cost-name">로션·세정제 등</div><div class="cost-hint">월 평균 2~3만원</div></div><input type="number" class="cost-input" value="3" min="0"> <span class="cost-unit">만원/월</span></div>
+      <div class="cost-row"><span class="cost-icon">🏥</span><div class="cost-label"><div class="cost-name">병원비 (소아과 등)</div><div class="cost-hint">월 평균 3~5만원</div></div><input type="number" class="cost-input" value="4" min="0"> <span class="cost-unit">만원/월</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>🛒</span> 대형 용품 (일회성)</div>
+    <div id="big-items">
+      <div class="cost-row"><span class="cost-icon">🏎️</span><div class="cost-label"><div class="cost-name">유모차</div><div class="cost-hint">30~200만원 (브랜드 차이 큼)</div></div><input type="number" class="cost-input" value="80" min="0"> <span class="cost-unit">만원</span></div>
+      <div class="cost-row"><span class="cost-icon">🚗</span><div class="cost-label"><div class="cost-name">카시트</div><div class="cost-hint">15~80만원</div></div><input type="number" class="cost-input" value="30" min="0"> <span class="cost-unit">만원</span></div>
+      <div class="cost-row"><span class="cost-icon">🛁</span><div class="cost-label"><div class="cost-name">아기 욕조·바운서 등</div><div class="cost-hint">10~30만원</div></div><input type="number" class="cost-input" value="20" min="0"> <span class="cost-unit">만원</span></div>
+    </div>
+  </div>
+
+  <div class="result-card">
+    <div class="result-label">✦ 총 육아 비용 (1년 기준)</div>
+    <div class="result-total" id="result-total">-</div>
+    <div class="bar-wrap" id="bar-wrap"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-8518556382646891" data-ad-slot="9202415241"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="nav-bottom">
+    <a href="support.html" class="nav-btn">💰 정부 지원금 확인</a>
+    <a href="index.html" class="nav-btn">🗓️ 출산 예정일</a>
+    <a href="guide.html" class="nav-btn">📖 임신 가이드</a>
+  </div>
+  <footer><p>© 2026 luckygrampus Baby. All Rights Reserved.</p><p style="margin-top:8px;opacity:0.5">비용은 참고용이며 개인 선택에 따라 크게 달라질 수 있습니다.</p></footer>
+</div>
+<script src="monetize.js"></script>
+<script>
+const segs = [
+  {id:'birth-items', label:'출산 준비', color:'#e8829a', monthly:false},
+  {id:'monthly-items', label:'월 소모품 (×12)', color:'#b56fd4', monthly:true},
+  {id:'big-items', label:'대형 용품', color:'#6f9fe8', monthly:false},
+];
+
+function update() {
+  let total = 0;
+  const vals = segs.map(s => {
+    let sum = 0;
+    document.getElementById(s.id).querySelectorAll('input').forEach(inp => {
+      sum += parseFloat(inp.value)||0;
+    });
+    if (s.monthly) sum *= 12;
+    total += sum;
+    return { ...s, sum };
+  });
+
+  const el = document.getElementById('result-total');
+  el.innerHTML = `${total.toLocaleString()}<span style="font-size:20px;color:var(--rose-dim)">만원</span>`;
+  el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
+
+  document.getElementById('bar-wrap').innerHTML = vals.map(v => {
+    const pct = total > 0 ? (v.sum/total*100).toFixed(1) : 0;
+    return `<div class="bar-seg" style="width:${pct}%;background:${v.color}"></div>`;
+  }).join('');
+
+  document.getElementById('legend').innerHTML = vals.map(v => {
+    const pct = total > 0 ? (v.sum/total*100).toFixed(0) : 0;
+    return `<span class="legend-item"><span class="legend-dot" style="background:${v.color}"></span>${v.label} ${pct}%</span>`;
+  }).join('');
+}
+
+document.querySelectorAll('.cost-input').forEach(el => el.addEventListener('input', update));
+update();
+injectCostLinks();
+</script>
+</body>
+</html>

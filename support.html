@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2026 출산 정부 지원금 계산기 | 부모급여·첫만남이용권·아동수당</title>
+  <meta name="description" content="2026년 출산 정부 지원금 총 얼마 받을 수 있을까? 부모급여, 첫만남이용권, 아동수당, 국민행복카드까지 총 지원금을 한번에 계산해드립니다."/>
+  <meta name="keywords" content="부모급여, 첫만남이용권, 아동수당, 출산 지원금, 2026 출산혜택, 국민행복카드"/>
+  <link rel="canonical" href="https://baby.luckygrampus.com/support.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="임신 가이드 | luckygrampus Baby"/>
+  <meta property="og:title" content="2026 출산 정부 지원금 계산기 | 부모급여·첫만남이용권·아동수당"/>
+  <meta property="og:description" content="2026년 출산 정부 지원금 총 얼마 받을 수 있을까? 부모급여, 첫만남이용권, 아동수당, 육아휴직 급여까지 총 지원금을 한번에 계산해드립니다."/>
+  <meta property="og:url" content="https://baby.luckygrampus.com/support.html"/>
+  <meta name="twitter:card" content="summary"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8518556382646891" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f0c1a;--surface:#171225;--card:#1e1830;--border:#2d2545;--rose:#e8829a;--rose-light:#f5a8bc;--rose-dim:#a0566a;--rose-bg:rgba(232,130,154,0.08);--text:#f0eaf5;--text-muted:#9a8fb0;--text-dim:#554d6a}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'Pretendard',sans-serif;min-height:100vh;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 15% 10%,rgba(232,130,154,0.07) 0%,transparent 60%);pointer-events:none;z-index:0}
+    nav{background:rgba(15,12,26,0.95);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+    .nav-inner{max-width:720px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:54px}
+    .nav-logo{font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:var(--rose-light);text-decoration:none;white-space:nowrap}
+    .nav-links{display:flex;gap:2px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+    .nav-links::-webkit-scrollbar{display:none}
+    .nav-links a{text-decoration:none;color:var(--text-muted);font-size:12px;padding:5px 10px;border-radius:20px;white-space:nowrap;transition:all 0.2s}
+    .nav-links a:hover,.nav-links a.active{background:var(--rose-bg);color:var(--rose-light)}
+    .container{max-width:720px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+    header{text-align:center;padding:52px 0 32px}
+    .header-ornament{font-size:40px;margin-bottom:12px;display:block;animation:float 4s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    header h1{font-family:'Noto Serif KR',serif;font-size:clamp(22px,5vw,34px);font-weight:700;color:var(--rose-light);letter-spacing:-0.5px}
+    header p{margin-top:10px;color:var(--text-muted);font-size:14px}
+    .rose-line{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--rose),transparent);margin:16px auto 0}
+    .ad-slot{background:var(--surface);border:1px dashed var(--border);border-radius:10px;margin:20px 0;min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px 22px;margin-bottom:14px;position:relative;overflow:hidden}
+    .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--rose-dim),transparent)}
+    .card-title{font-family:'Noto Serif KR',serif;font-size:15px;font-weight:600;color:var(--rose);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+    .field{margin-bottom:18px}
+    .field:last-child{margin-bottom:0}
+    label{display:block;font-size:13px;color:var(--text-muted);margin-bottom:10px}
+    .toggle-group{display:flex;gap:8px;flex-wrap:wrap}
+    .toggle-btn{flex:1;min-width:80px;padding:10px 12px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;color:var(--text-muted);font-size:13px;font-family:'Pretendard',sans-serif;cursor:pointer;transition:all 0.2s;text-align:center;white-space:nowrap}
+    .toggle-btn:hover{border-color:var(--rose-dim);color:var(--text)}
+    .toggle-btn.active{background:var(--rose-bg);border-color:var(--rose);color:var(--rose-light);font-weight:600}
+
+    /* Result */
+    .result-card{background:linear-gradient(135deg,#1a0d1a 0%,#150d20 100%);border:1px solid var(--rose-dim);border-radius:20px;padding:32px 24px;text-align:center;margin:16px 0;position:relative;overflow:hidden}
+    .result-card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(232,130,154,0.07) 0%,transparent 70%);pointer-events:none}
+    .result-label{font-size:11px;color:var(--rose-dim);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
+    .result-total{font-family:'Noto Serif KR',serif;font-size:clamp(36px,9vw,58px);font-weight:700;color:var(--rose-light);line-height:1}
+    .result-total.pop{animation:pop 0.3s ease}
+    @keyframes pop{0%{transform:scale(0.93)}60%{transform:scale(1.05)}100%{transform:scale(1)}}
+    .result-sub{font-size:13px;color:var(--text-muted);margin-top:8px}
+
+    /* 지원금 항목 */
+    .support-list{list-style:none;margin-top:16px}
+    .support-item{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);gap:12px}
+    .support-item:last-child{border-bottom:none}
+    .support-name{font-size:14px;color:var(--text);flex:1}
+    .support-desc{font-size:11px;color:var(--text-muted);margin-top:2px}
+    .support-amt{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--rose-light);font-weight:600;white-space:nowrap}
+    .support-amt.disabled{color:var(--text-dim)}
+
+    /* 상세 테이블 */
+    .info-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
+    .info-table th{background:rgba(232,130,154,0.1);color:var(--rose);padding:10px 12px;text-align:left;border:1px solid var(--border)}
+    .info-table td{padding:10px 12px;border:1px solid var(--border);color:var(--text-muted);vertical-align:top}
+    .info-table tr:nth-child(even) td{background:rgba(255,255,255,0.02)}
+
+    .highlight{background:rgba(232,130,154,0.06);border:1px solid var(--rose-dim);border-radius:12px;padding:14px 16px;margin:14px 0;font-size:13px;color:var(--text-muted);line-height:1.75}
+    .highlight strong{color:var(--rose-light)}
+
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{padding:14px 0;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--text)}
+    .faq-arrow{color:var(--rose-dim);font-size:16px;transition:transform 0.25s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{font-size:13px;color:var(--text-muted);line-height:1.75;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.2s}
+    .faq-item.open .faq-a{max-height:300px;padding-bottom:14px}
+
+    .nav-bottom{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+    .nav-btn{flex:1;min-width:120px;padding:13px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text-muted);font-size:13px;font-family:'Pretendard',sans-serif;text-decoration:none;text-align:center;transition:all 0.2s;display:block}
+    .nav-btn:hover{border-color:var(--rose-dim);color:var(--rose-light)}
+    footer{text-align:center;padding:40px 0 20px;color:var(--text-dim);font-size:12px;line-height:2;border-top:1px solid var(--border);margin-top:40px}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">🤰 임신 가이드</a>
+    <div class="nav-links">
+      <a href="index.html">🗓️ 예정일</a>
+      <a href="week.html">👶 주차별</a>
+      <a href="support.html" class="active">💰 지원금</a>
+      <a href="cost.html">🧮 육아비용</a>
+      <a href="guide.html">📖 가이드</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <header>
+    <span class="header-ornament">💰</span>
+    <h1>출산 정부 지원금 계산기</h1>
+    <p>2026년 최신 기준 — 내가 받을 수 있는 총 지원금</p>
+    <div class="rose-line"></div>
+  </header>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8518556382646891" data-ad-slot="8080905265" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>⚙️</span> 내 상황 입력</div>
+    <div class="field">
+      <label>아이가 몇 번째 자녀인가요?</label>
+      <div class="toggle-group" id="child-group">
+        <button class="toggle-btn active" data-val="1">첫째</button>
+        <button class="toggle-btn" data-val="2">둘째</button>
+        <button class="toggle-btn" data-val="3">셋째+</button>
+      </div>
+    </div>
+    <div class="field">
+      <label>맞벌이 여부</label>
+      <div class="toggle-group" id="work-group">
+        <button class="toggle-btn active" data-val="both">맞벌이</button>
+        <button class="toggle-btn" data-val="single">외벌이</button>
+      </div>
+    </div>
+    <div class="field">
+      <label>육아휴직 사용 예정</label>
+      <div class="toggle-group" id="leave-group">
+        <button class="toggle-btn active" data-val="yes">사용 예정</button>
+        <button class="toggle-btn" data-val="no">미사용</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-card">
+    <div class="result-label">✦ 총 수령 가능 지원금 (2년 기준)</div>
+    <div class="result-total" id="result-total">3,840<span style="font-size:20px;color:var(--rose-dim)">만원+</span></div>
+    <div class="result-sub" id="result-sub">현금성 지원금 기준 (육아휴직급여 제외)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>📋</span> 지원금 항목별 상세</div>
+    <ul class="support-list" id="support-list"></ul>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8518556382646891" data-ad-slot="3083729457" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>📊</span> 2026년 주요 지원금 총정리</div>
+    <table class="info-table">
+      <tr><th>지원금 종류</th><th>금액</th><th>기간</th></tr>
+      <tr><td>첫만남이용권</td><td>첫째 200만원<br>둘째+ 300만원</td><td>출생 후 1회</td></tr>
+      <tr><td>부모급여</td><td>0세 100만원/월<br>1세 50만원/월</td><td>0~23개월</td></tr>
+      <tr><td>아동수당</td><td>10만원/월</td><td>0~95개월</td></tr>
+      <tr><td>국민행복카드</td><td>100만원 (단태아)</td><td>임신 중 1회</td></tr>
+      <tr><td>산모신생아서비스</td><td>최대 240만원 상당</td><td>출산 후</td></tr>
+    </table>
+    <div class="highlight">
+      💡 <strong>핵심 꿀팁:</strong> 부모급여는 어린이집을 이용하면 보육료 바우처로 전환돼요. 가정양육 시 현금으로 받을 수 있어서 맞벌이보다 <strong>전업주부 가정이 현금 수령액이 더 많습니다.</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>❓</span> 자주 묻는 질문</div>
+    <div id="faq">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">첫만남이용권은 어디서 신청하나요? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">출생신고 후 정부24 또는 행복출산 원스톱서비스에서 신청할 수 있어요. 출생신고 시 함께 신청 가능해서 편리합니다. 국민행복카드로 바우처 형태로 지급돼요.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">부모급여와 아동수당 중복 수령 가능한가요? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">네! 부모급여와 아동수당은 중복으로 받을 수 있어요. 0세 기준 부모급여 100만원 + 아동수당 10만원 = 월 110만원을 수령할 수 있습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">육아휴직 급여는 얼마나 받나요? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">2024년부터 육아휴직 급여가 대폭 인상됐어요. 첫 3개월은 통상임금의 100%(월 최대 250만원), 이후 3개월은 80%(월 최대 150만원), 나머지 기간은 50%(월 최대 120만원)입니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-8518556382646891" data-ad-slot="9202415241"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="nav-bottom">
+    <a href="index.html" class="nav-btn">🗓️ 출산 예정일</a>
+    <a href="cost.html" class="nav-btn">🧮 육아 비용</a>
+    <a href="guide.html" class="nav-btn">📖 임신 가이드</a>
+  </div>
+  <footer><p>© 2026 luckygrampus Baby. All Rights Reserved.</p><p style="margin-top:8px;opacity:0.5">지원금 기준은 변경될 수 있으므로 복지로(bokjiro.go.kr)에서 최신 정보를 확인하세요.</p></footer>
+</div>
+<script>
+const state = { child: 1, work: 'both', leave: 'yes' };
+
+const items = [
+  { key:'welcome', name:'첫만남이용권', desc:'출생 후 1회 지급 (국민행복카드 바우처)', calc: s => s.child===1?200:300 },
+  { key:'parent0', name:'부모급여 (0세 · 12개월)', desc:'월 100만원 × 12개월', calc: s => 1200 },
+  { key:'parent1', name:'부모급여 (1세 · 12개월)', desc:'월 50만원 × 12개월', calc: s => 600 },
+  { key:'child',   name:'아동수당 (2년)', desc:'월 10만원 × 24개월', calc: s => 240 },
+  { key:'happy',   name:'국민행복카드 (임신바우처)', desc:'단태아 100만원 (다태아 140만원)', calc: s => 100 },
+  { key:'birth',   name:'출산 지원금 (지자체)', desc:'지역마다 다름 (평균 50~200만원)', calc: s => s.child===1?100:s.child===2?200:300 },
+  { key:'nurse',   name:'산모신생아 건강관리 서비스', desc:'가정방문 서비스 (소득에 따라 최대 240만원)', calc: s => 150 },
+  { key:'leave',   name:'육아휴직 급여 ★', desc: s => s.leave==='no' ? '미사용' : s.work==='both' ? '부부 각각 최대 1,920만원 — 급여에 따라 달라요' : '1인 최대 1,920만원 — 급여에 따라 달라요', calc: s => {
+    if(s.leave==='no') return 0;
+    const perPerson = 1920; // 첫 3개월 250×3 + 다음 3개월 150×3 + 나머지 6개월 120×6
+    return s.work==='both' ? perPerson * 2 : perPerson;
+  }},
+];
+
+function update() {
+  let total = 0;
+  const list = document.getElementById('support-list');
+  list.innerHTML = items.map(it => {
+    const amt = it.calc(state);
+    total += amt;
+    const desc = typeof it.desc === 'function' ? it.desc(state) : it.desc;
+    const amtHtml = amt === 0
+      ? `<div class="support-amt disabled">해당없음</div>`
+      : `<div class="support-amt">${amt.toLocaleString()}만원</div>`;
+    return `<li class="support-item">
+      <div><div class="support-name">${it.name}</div><div class="support-desc">${desc}</div></div>
+      ${amtHtml}
+    </li>`;
+  }).join('');
+
+  const el = document.getElementById('result-total');
+  el.innerHTML = `${total.toLocaleString()}<span style="font-size:20px;color:var(--rose-dim)">만원+</span>`;
+  el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
+  const leaveNote = state.leave === 'yes' ? ' + 육아휴직 급여 (★ 급여에 따라 다름)' : '';
+  document.getElementById('result-sub').textContent = `현금성 지원금 합계${leaveNote}`;
+}
+
+['child-group','work-group','leave-group'].forEach((id,i)=>{
+  const key = ['child','work','leave'][i];
+  document.getElementById(id).querySelectorAll('.toggle-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.getElementById(id).querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      state[key] = key==='child' ? parseInt(btn.dataset.val) : btn.dataset.val;
+      update();
+    });
+  });
+});
+
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+
+update();
+</script>
+</body>
+</html>

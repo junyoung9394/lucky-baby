@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>임신 출산 계산기 | 출산 예정일·주차별 태아 발달 가이드 2026</title>
+  <meta name="description" content="출산 예정일 계산기, 임신 주차별 태아 발달 정보, 임신 초기 주의사항, 정부 지원 혜택까지 임산부를 위한 모든 정보를 제공합니다."/>
+  <meta name="keywords" content="출산 예정일 계산기, 임신 주차 계산기, 임신 초기 주의사항, 태아 발달, 임신 증상"/>
+  <meta name="naver-site-verification" content="3a6ec11654bd716071a108cb354c82f10eebdc3d" />
+  <link rel="canonical" href="https://baby.luckygrampus.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="임신 가이드 | luckygrampus Baby"/>
+  <meta property="og:title" content="임신 출산 계산기 | 출산 예정일·주차별 태아 발달 가이드 2026"/>
+  <meta property="og:description" content="출산 예정일 계산기, 임신 주차별 태아 발달 정보, 정부 지원 혜택까지 임산부를 위한 모든 정보를 제공합니다."/>
+  <meta property="og:url" content="https://baby.luckygrampus.com/"/>
+  <meta name="twitter:card" content="summary"/>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8518556382646891" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f0c1a; --surface: #171225; --card: #1e1830; --border: #2d2545;
+      --rose: #e8829a; --rose-light: #f5a8bc; --rose-dim: #a0566a;
+      --rose-bg: rgba(232,130,154,0.08);
+      --text: #f0eaf5; --text-muted: #9a8fb0; --text-dim: #554d6a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Pretendard', sans-serif; min-height: 100vh; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 15% 10%, rgba(232,130,154,0.07) 0%, transparent 60%),
+                  radial-gradient(ellipse 50% 40% at 85% 80%, rgba(160,100,200,0.05) 0%, transparent 55%);
+      pointer-events: none; z-index: 0; }
+
+    /* NAV */
+    nav { background: rgba(15,12,26,0.95); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); }
+    .nav-inner { max-width: 720px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 54px; }
+    .nav-logo { font-family: 'Noto Serif KR', serif; font-size: 16px; font-weight: 700; color: var(--rose-light); text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; gap: 2px; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 12px; padding: 5px 10px; border-radius: 20px; white-space: nowrap; transition: all 0.2s; }
+    .nav-links a:hover, .nav-links a.active { background: var(--rose-bg); color: var(--rose-light); }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; position: relative; z-index: 1; }
+
+    /* HEADER */
+    header { text-align: center; padding: 56px 0 36px; }
+    .header-ornament { font-size: 44px; margin-bottom: 14px; display: block; animation: float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    header h1 { font-family: 'Noto Serif KR', serif; font-size: clamp(24px,5vw,36px); font-weight: 700; color: var(--rose-light); letter-spacing: -0.5px; line-height: 1.3; }
+    header p { margin-top: 10px; color: var(--text-muted); font-size: 14px; font-weight: 300; }
+    .rose-line { width: 60px; height: 1px; background: linear-gradient(90deg,transparent,var(--rose),transparent); margin: 18px auto 0; }
+
+    /* AD */
+    .ad-slot { background: var(--surface); border: 1px dashed var(--border); border-radius: 10px; margin: 22px 0; min-height: 90px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+    /* CARD */
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 28px 24px; margin-bottom: 16px; position: relative; overflow: hidden; transition: border-color 0.2s; }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,var(--rose-dim),transparent); opacity: 0; transition: opacity 0.3s; }
+    .card:hover::before { opacity: 1; }
+    .card:hover { border-color: #3d3060; }
+    .card-title { font-family: 'Noto Serif KR', serif; font-size: 15px; font-weight: 600; color: var(--rose); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+
+    /* DATE INPUT */
+    .date-input-wrap { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    input[type=date] { background: var(--surface); border: 1.5px solid var(--border); border-radius: 12px; padding: 12px 16px; color: var(--text); font-size: 15px; font-family: 'Pretendard', sans-serif; outline: none; transition: border-color 0.2s; flex: 1; min-width: 160px; color-scheme: dark; }
+    input[type=date]:focus { border-color: var(--rose-dim); }
+    .calc-btn { background: linear-gradient(135deg, var(--rose-dim), var(--rose)); border: none; border-radius: 12px; padding: 12px 24px; color: white; font-size: 14px; font-weight: 600; font-family: 'Pretendard', sans-serif; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .calc-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(232,130,154,0.3); }
+
+    /* RESULT */
+    .result-card { background: linear-gradient(135deg, #1a0d1a 0%, #150d20 50%, #0f0c1a 100%); border: 1px solid var(--rose-dim); border-radius: 20px; padding: 36px 28px; text-align: center; margin: 20px 0; display: none; position: relative; overflow: hidden; }
+    .result-card.show { display: block; animation: fadeUp 0.4s ease; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+    .result-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(232,130,154,0.07) 0%, transparent 70%); pointer-events: none; }
+    .result-label { font-size: 11px; color: var(--rose-dim); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 14px; font-weight: 600; }
+    .result-date { font-family: 'Noto Serif KR', serif; font-size: clamp(28px,7vw,48px); font-weight: 700; color: var(--rose-light); line-height: 1.1; }
+    .result-dday { font-size: 18px; color: var(--rose); margin-top: 8px; font-weight: 600; }
+    .result-week { font-size: 14px; color: var(--text-muted); margin-top: 6px; }
+
+    /* WEEK INFO */
+    .week-info { margin-top: 20px; padding: 18px; background: rgba(0,0,0,0.25); border-radius: 12px; text-align: left; border-left: 3px solid var(--rose-dim); }
+    .week-info-title { font-size: 14px; font-weight: 600; color: var(--rose-light); margin-bottom: 10px; }
+    .week-info-body { font-size: 13px; color: var(--text-muted); line-height: 1.75; }
+
+    /* INFO GRID */
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .info-item { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px; transition: border-color 0.2s; }
+    .info-item:hover { border-color: var(--rose-dim); }
+    .info-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .info-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .info-desc { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+
+    /* TOOL GRID */
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+    .tool-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; padding: 20px 16px; text-decoration: none; color: var(--text); transition: all 0.2s; display: block; }
+    .tool-card:hover { border-color: var(--rose-dim); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+    .tool-card-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+    .tool-card-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .tool-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .tool-badge { display: inline-block; font-size: 10px; background: var(--rose-bg); color: var(--rose); border: 1px solid var(--rose-dim); border-radius: 20px; padding: 2px 8px; margin-top: 8px; font-weight: 600; }
+
+    /* CHECKLIST */
+    .check-list { list-style: none; }
+    .check-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .check-item:last-child { border-bottom: none; }
+    .check-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { padding: 15px 0; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--text); }
+    .faq-arrow { color: var(--rose-dim); font-size: 16px; transition: transform 0.25s; flex-shrink: 0; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a { font-size: 13px; color: var(--text-muted); line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 14px; }
+
+    .nav-bottom { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+    .nav-btn { flex: 1; min-width: 120px; padding: 13px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; color: var(--text-muted); font-size: 13px; font-family: 'Pretendard', sans-serif; text-decoration: none; text-align: center; transition: all 0.2s; display: block; }
+    .nav-btn:hover { border-color: var(--rose-dim); color: var(--rose-light); }
+
+    footer { text-align: center; padding: 40px 0 20px; color: var(--text-dim); font-size: 12px; line-height: 2; border-top: 1px solid var(--border); margin-top: 40px; }
+
+    @media(max-width:480px) { .info-grid{grid-template-columns:1fr 1fr} .tool-grid{grid-template-columns:1fr 1fr} .card{padding:20px 16px} }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">🤰 임신 가이드</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">🗓️ 예정일</a>
+      <a href="week.html">👶 주차별</a>
+      <a href="support.html">💰 지원금</a>
+      <a href="cost.html">🧮 육아비용</a>
+      <a href="guide.html">📖 가이드</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header>
+    <span class="header-ornament">🤰</span>
+    <h1>임신 출산 계산기</h1>
+    <p>세상에서 가장 설레는 기다림</p>
+    <div class="rose-line"></div>
+  </header>
+
+  <!-- 광고 상단 -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8518556382646891" data-ad-slot="8080905265" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 계산기 -->
+  <div class="card">
+    <div class="card-title"><span>📅</span> 출산 예정일 계산기</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px">마지막 생리 시작일을 입력하면 출산 예정일과 현재 임신 주차를 알려드려요 (산부인과 표준 LMP 방식)</p>
+    <div class="date-input-wrap">
+      <input type="date" id="lmp-date" max="">
+      <button class="calc-btn" onclick="calculate()">예정일 확인하기 →</button>
+    </div>
+  </div>
+
+  <!-- 결과 -->
+  <div class="result-card" id="result-card">
+    <div class="result-label">✦ 출산 예정일</div>
+    <div class="result-date" id="result-date">-</div>
+    <div class="result-dday" id="result-dday">-</div>
+    <div class="result-week" id="result-week">-</div>
+    <div class="week-info" id="week-info" style="display:none">
+      <div class="week-info-title" id="week-info-title">-</div>
+      <div class="week-info-body" id="week-info-body">-</div>
+    </div>
+    <a id="week-detail-link" href="week.html" style="display:none;margin-top:14px;padding:10px 18px;background:var(--rose-bg);border:1px solid var(--rose-dim);border-radius:10px;color:var(--rose-light);font-size:13px;font-weight:600;text-decoration:none;text-align:center;display:none">👶 주차별 상세 발달 정보 보기 →</a>
+  </div>
+
+  <!-- 태아보험 CTA (Phase 1) -->
+  <div id="m-ins-slot"></div>
+
+  <!-- 광고 중간 -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8518556382646891" data-ad-slot="3083729457" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 도구 모음 -->
+  <div class="card">
+    <div class="card-title"><span>🧰</span> 임신·육아 계산기 모음</div>
+    <div class="tool-grid">
+      <a href="week.html" class="tool-card">
+        <span class="tool-card-icon">👶</span>
+        <div class="tool-card-title">주차별 태아 발달</div>
+        <div class="tool-card-desc">1~40주 태아 크기·발달 상세 정보</div>
+        <span class="tool-badge">인기</span>
+      </a>
+      <a href="support.html" class="tool-card">
+        <span class="tool-card-icon">💰</span>
+        <div class="tool-card-title">정부 지원금 계산기</div>
+        <div class="tool-card-desc">부모급여·첫만남이용권 총 지원금</div>
+        <span class="tool-badge">2026 최신</span>
+      </a>
+      <a href="cost.html" class="tool-card">
+        <span class="tool-card-icon">🧮</span>
+        <div class="tool-card-title">육아 비용 계산기</div>
+        <div class="tool-card-desc">분유·기저귀·산후조리원 총비용</div>
+        <span class="tool-badge">NEW</span>
+      </a>
+      <a href="guide.html" class="tool-card">
+        <span class="tool-card-icon">📖</span>
+        <div class="tool-card-title">임신 가이드</div>
+        <div class="tool-card-desc">초기·중기·말기 완벽 가이드</div>
+        <span class="tool-badge">NEW</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 임신 초기 가이드 -->
+  <div class="card">
+    <div class="card-title"><span>🍼</span> 임신 초기 필수 가이드</div>
+    <div class="info-grid">
+      <div class="info-item">
+        <span class="info-icon">🚫</span>
+        <div class="info-title">주의사항</div>
+        <div class="info-desc">약 복용 전 의사 상담 필수<br>날음식(육회·회) 주의<br>고온 사우나 자제<br>카페인 200mg 미만</div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💊</span>
+        <div class="info-title">필수 영양제</div>
+        <div class="info-desc">엽산: 12주까지 필수<br>비타민D: 한국인 부족<br>철분: 16주 이후부터<br>오메가3: 식물성 권장</div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💳</span>
+        <div class="info-title">정부 지원 혜택</div>
+        <div class="info-desc">국민행복카드 바우처<br>보건소 영양제 무료<br>임산부 배지 발급<br>부모급여 지원</div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📝</span>
+        <div class="info-title">체크리스트</div>
+        <div class="info-desc">태아보험 가입 (12주 전)<br>산후조리원 예약<br>초기 정밀초음파<br>치과 검진 권장</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <div class="card-title"><span>❓</span> 자주 묻는 질문</div>
+    <div id="faq">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">출산 예정일은 어떻게 계산하나요? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">산부인과에서 사용하는 표준 방식(LMP)으로, 마지막 생리 시작일에서 280일(40주)을 더해 계산합니다. 실제 출산은 예정일 전후 2주 사이가 정상 범위예요.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">임신 초기 증상은 언제부터 나타나나요? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">임신 4~6주차부터 가슴 통증, 입덧, 피로감, 잦은 소변 등이 나타나기 시작해요. 입덧은 보통 12~14주차에 완화되는 경우가 많습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">엽산은 언제까지 먹어야 하나요? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">임신을 계획 중이라면 최소 3개월 전부터, 임신 후에는 12주까지 복용하는 것이 표준입니다. 신경관 결손 예방에 필수적이에요. 일부 의사는 전 기간 복용을 권장하기도 합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">산후조리원 예약은 언제 해야 하나요? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">인기 있는 산후조리원은 임신 초기(12~16주)에 이미 마감되는 경우가 많아요. 임신이 확인되면 가능한 빨리 알아보는 것을 추천해요. 비용은 지역마다 다르지만 2주 기준 100~300만원 정도예요.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 광고 하단 -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-8518556382646891" data-ad-slot="9202415241"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="nav-bottom">
+    <a href="week.html" class="nav-btn">👶 주차별 발달 정보</a>
+    <a href="support.html" class="nav-btn">💰 정부 지원금</a>
+    <a href="cost.html" class="nav-btn">🧮 육아 비용</a>
+    <a href="guide.html" class="nav-btn">📖 임신 가이드</a>
+  </div>
+
+  <footer>
+    <p>© 2026 luckygrampus Baby. All Rights Reserved.</p>
+    <p style="margin-top:8px;opacity:0.5">본 정보는 참고용이며 정확한 진단은 반드시 산부인과 전문의와 상담하세요.</p>
+  </footer>
+</div>
+
+<script src="monetize.js"></script>
+<script>
+// 주차별 태아 정보
+const weekData = {
+  4:  { title: '임신 4주 — 착상 완료', body: '수정란이 자궁에 착상했어요. 아직 크기는 0.1mm 정도이지만 뇌·척수·심장의 기초가 형성되기 시작합니다. 임신 테스트기에서 양성 반응이 나타나는 시기예요.' },
+  5:  { title: '임신 5주 — 심장 박동 시작', body: '배아의 심장이 뛰기 시작해요! 크기는 참깨(약 1mm) 정도. 초음파로 심박수를 확인할 수 있는 시기입니다. 입덧이 시작되는 경우가 많아요.' },
+  6:  { title: '임신 6주 — 뇌와 척수 발달', body: '크기는 완두콩(약 6mm). 뇌·눈·코·귀의 기초가 형성되고 팔다리 싹이 생겨나요. 입덧이 본격화되는 시기입니다.' },
+  7:  { title: '임신 7주 — 손가락 형성', body: '크기는 블루베리(약 13mm). 손가락과 발가락이 생기기 시작하고 얼굴 윤곽이 잡혀요. 뇌가 급속도로 발달합니다.' },
+  8:  { title: '임신 8주 — 태아 형태 완성', body: '크기는 라즈베리(약 16mm). 모든 주요 장기의 기초가 완성됐어요. 이제부터 공식적으로 "태아(fetus)"라고 불립니다.' },
+  9:  { title: '임신 9주 — 움직임 시작', body: '크기는 포도(약 23mm). 태아가 양수 속에서 움직이기 시작해요. 손가락과 발가락이 완전히 분리됩니다.' },
+  10: { title: '임신 10주 — 외부 생식기 발달', body: '크기는 매실(약 31mm). 성별이 결정되지만 초음파로 구별은 아직 어려워요. 심장박동을 선명하게 들을 수 있습니다.' },
+  11: { title: '임신 11주 — 손발 완성', body: '크기는 무화과(약 41mm). 손발이 완전히 형성되고 손발톱이 자라기 시작해요. 태아는 활발하게 움직입니다.' },
+  12: { title: '임신 12주 — 1삼분기 완료 🎉', body: '크기는 키위(약 54mm). 유산 위험이 크게 줄어드는 안정기의 시작이에요! 이 시기에 NT검사(목덜미투명도)를 받는 것을 권장합니다.' },
+  16: { title: '임신 16주 — 성별 확인 가능', body: '크기는 아보카도(약 11.6cm). 성별을 초음파로 확인할 수 있는 시기예요. 태동을 처음 느끼는 임산부도 있습니다.' },
+  20: { title: '임신 20주 — 정밀초음파', body: '크기는 바나나(약 16.4cm). 정밀초음파 검사 권장 시기예요. 태아 기형 여부를 확인하고 태동도 뚜렷하게 느낍니다.' },
+  24: { title: '임신 24주 — 생존 가능 단계', body: '크기는 옥수수(약 30cm). 이 시기부터 조산해도 집중치료로 생존이 가능해요. 임신성 당뇨 검사(OGTT)를 받는 시기입니다.' },
+  28: { title: '임신 28주 — 3삼분기 시작', body: '크기는 가지(약 37cm). 태아의 눈이 열리고 빛을 감지할 수 있어요. 뇌가 빠르게 발달하며 태동이 규칙적으로 느껴집니다.' },
+  32: { title: '임신 32주 — 출산 준비', body: '크기는 스쿼시(약 42cm). 피하지방이 축적되면서 아기 몸이 통통해져요. 분만 방법과 산후조리원을 최종 결정할 시기입니다.' },
+  36: { title: '임신 36주 — 완숙 준비', body: '크기는 파파야(약 47cm). 태아가 머리를 아래로 향하는 두위 자세로 내려오는 시기예요. 분만 징후(이슬·진통)를 주의 깊게 살펴야 해요.' },
+  40: { title: '임신 40주 — 출산 예정일 🎊', body: '크기는 작은 수박(약 51cm, 약 3.4kg). 드디어 예정일이에요! 이슬이 비치거나 규칙적인 진통이 시작되면 병원으로 가세요.' },
+};
+
+function getWeekInfo(week) {
+  const keys = Object.keys(weekData).map(Number).sort((a,b)=>a-b);
+  let bestKey = keys[0];
+  for (const k of keys) { if (week >= k) bestKey = k; }
+  return weekData[bestKey] || weekData[4];
+}
+
+function calculate() {
+  const lmpVal = document.getElementById('lmp-date').value;
+  if (!lmpVal) { alert('마지막 생리 시작일을 선택해주세요.'); return; }
+
+  const lmp = new Date(lmpVal);
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  const due = new Date(lmp);
+  due.setDate(due.getDate() + 280);
+
+  const diffMs = due - today;
+  const diffDays = Math.round(diffMs / (1000*60*60*24));
+
+  const weeksPast = Math.floor((today - lmp) / (1000*60*60*24*7));
+  const daysPast = Math.floor(((today - lmp) / (1000*60*60*24)) % 7);
+
+  const dueStr = `${due.getFullYear()}.${String(due.getMonth()+1).padStart(2,'0')}.${String(due.getDate()).padStart(2,'0')}`;
+
+  let ddayStr = '';
+  if (diffDays > 0) ddayStr = `D-${diffDays}`;
+  else if (diffDays === 0) ddayStr = '🎊 오늘이 예정일이에요!';
+  else ddayStr = `D+${Math.abs(diffDays)}`;
+
+  document.getElementById('result-date').textContent = dueStr;
+  document.getElementById('result-dday').textContent = ddayStr;
+
+  const link = document.getElementById('week-detail-link');
+  if (weeksPast >= 0 && weeksPast <= 42) {
+    document.getElementById('result-week').textContent = `현재 임신 ${weeksPast}주 ${daysPast}일`;
+    const info = getWeekInfo(weeksPast);
+    document.getElementById('week-info-title').textContent = info.title;
+    document.getElementById('week-info-body').textContent = info.body;
+    document.getElementById('week-info').style.display = 'block';
+    link.href = `week.html?w=${weeksPast}`;
+    link.style.display = 'block';
+  } else {
+    document.getElementById('result-week').textContent = '';
+    document.getElementById('week-info').style.display = 'none';
+    link.style.display = 'none';
+  }
+
+  const card = document.getElementById('result-card');
+  card.classList.remove('show');
+  void card.offsetWidth;
+  card.classList.add('show');
+
+  renderInsurance('m-ins-slot', weeksPast >= 0 && weeksPast <= 42 ? weeksPast : 20);
+}
+
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!open) item.classList.add('open');
+}
+
+// 오늘 날짜로 max 설정
+const lmpInput = document.getElementById('lmp-date');
+lmpInput.max = new Date().toISOString().split('T')[0];
+lmpInput.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+</script>
+</body>
+</html>
