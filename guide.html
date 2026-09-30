@@ -65,9 +65,33 @@
     .nav-btn{flex:1;min-width:120px;padding:13px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text-muted);font-size:13px;font-family:'Pretendard',sans-serif;text-decoration:none;text-align:center;transition:all 0.2s;display:block}
     .nav-btn:hover{border-color:var(--rose-dim);color:var(--rose-light)}
     footer{text-align:center;padding:40px 0 20px;color:var(--text-dim);font-size:12px;line-height:2;border-top:1px solid var(--border);margin-top:40px}
+    .side-ad{position:fixed;top:50%;transform:translateY(-50%);width:160px;z-index:50;display:none}
+    .side-ad-left{left:calc(50% - 360px - 175px)}
+    .side-ad-right{right:calc(50% - 360px - 175px)}
+    @media(min-width:1120px){.side-ad{display:block}}
+    .bottom-sticky-ad{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);z-index:200;display:flex;justify-content:center;align-items:center;padding:4px 0;min-height:60px}
+    .bottom-sticky-close{position:absolute;top:4px;right:10px;background:none;border:none;color:var(--text-dim);font-size:18px;cursor:pointer;line-height:1;padding:2px 4px}
+    @media(min-width:1120px){.bottom-sticky-ad{display:none}}
+    body{padding-bottom:70px}
+    @media(min-width:1120px){body{padding-bottom:0}}
   </style>
+<script defer src="/site-analytics.js"></script>
 </head>
 <body>
+
+<div class="side-ad side-ad-left">
+  <ins class="adsbygoogle" style="display:block;width:160px;height:600px" data-ad-client="ca-pub-8518556382646891" data-ad-slot="2806114975" data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="side-ad side-ad-right">
+  <ins class="adsbygoogle" style="display:block;width:160px;height:600px" data-ad-client="ca-pub-8518556382646891" data-ad-slot="3101206986" data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="bottom-sticky-ad" id="bottomStickyAd">
+  <button class="bottom-sticky-close" onclick="document.getElementById('bottomStickyAd').style.display='none';document.body.style.paddingBottom='0'">✕</button>
+  <ins class="adsbygoogle" style="display:block;width:320px;height:50px" data-ad-client="ca-pub-8518556382646891" data-ad-slot="9202415241" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">🤰 임신 가이드</a>
@@ -161,8 +185,8 @@
     <h3>주요 증상</h3>
     <ul>
       <li><strong>숨 참:</strong> 자궁이 횡격막을 압박해요</li>
-      <li><strong>부종:</strong> 발·발목이 자주 붓는 것은 정상이에요</li>
-      <li><strong>불규칙 진통(브랙스턴힉스):</strong> 가짜 진통, 10분 이내면 정상</li>
+      <li><strong>부종:</strong> 발·발목이 부을 수 있지만 갑작스러운 부종, 심한 두통이나 시야 변화가 있으면 즉시 진료를 받으세요</li>
+      <li><strong>불규칙 진통(브랙스턴힉스):</strong> 불규칙한 배 뭉침이 생길 수 있지만 간격만으로 정상 여부를 판단할 수 없습니다. 규칙적이거나 아프거나 37주 이전에 반복되면 의료진에게 연락하세요</li>
       <li><strong>이슬:</strong> 분홍빛 점액, 출산 임박 신호</li>
     </ul>
     <h3>출산 징후 — 바로 병원으로!</h3>
@@ -181,12 +205,12 @@
     <h2>임산부 필수 영양제 가이드</h2>
     <table>
       <tr><th>영양제</th><th>복용 시기</th><th>효과</th></tr>
-      <tr><td>엽산</td><td>임신 전~12주</td><td>신경관 결손 예방 (필수)</td></tr>
+      <tr><td>엽산</td><td>임신 전부터·임신 중 필요량 상담</td><td>신경관 결손 예방 (필수)</td></tr>
       <tr><td>철분</td><td>16주~</td><td>빈혈 예방, 태아 성장</td></tr>
       <tr><td>비타민D</td><td>전 기간</td><td>칼슘 흡수, 면역력</td></tr>
       <tr><td>오메가3 (DHA)</td><td>전 기간</td><td>태아 뇌 발달</td></tr>
       <tr><td>칼슘</td><td>중기~</td><td>태아 뼈 형성</td></tr>
-      <tr><td>마그네슘</td><td>중기~</td><td>다리 경련 완화</td></tr>
+      <tr><td>마그네슘 등 추가 영양제</td><td>필요 시 의료진 상담</td><td>모든 임산부에게 일률적으로 권장하지 않음</td></tr>
     </table>
     <div class="highlight">💡 <strong>보건소 무료 제공:</strong> 엽산(초기)과 철분제(중기~)는 보건소에서 무료로 받을 수 있어요!</div>
     <div id="m-nutrients"></div>
@@ -203,7 +227,7 @@
       <li><strong>카페인 과다:</strong> 하루 200mg 미만 (아메리카노 1잔 정도)</li>
       <li><strong>고온 사우나/찜질방:</strong> 체온 상승으로 태아에 위험</li>
       <li><strong>임의 약 복용:</strong> 반드시 의사 처방 후 복용</li>
-      <li><strong>방사선:</strong> X-ray는 꼭 필요한 경우만, CT는 피하기</li>
+      <li><strong>방사선:</strong> 검사 전 임신 사실을 알리세요. 필요한 X-ray나 CT는 의료진이 이익과 위험을 판단하므로 임의로 거부하거나 미루지 마세요</li>
       <li><strong>고위험 운동:</strong> 스키·스쿠버다이빙·접촉 스포츠 등</li>
     </ul>
   </div>
@@ -218,7 +242,7 @@
     <h3>독서 태교</h3>
     <p>소리 내어 책을 읽어주세요. 동화책, 시집, 좋은 글귀 모두 좋아요. 엄마 목소리의 진동이 태아에게 전달됩니다.</p>
     <h3>감정 태교</h3>
-    <p>엄마의 감정 상태가 태아에게 직접 전달돼요. 스트레스를 줄이고 행복한 생각을 많이 하세요. 산책, 명상, 가벼운 요가도 좋아요.</p>
+    <p>임신 중 감정 변화는 자연스러우며 일상적인 스트레스 때문에 자신을 탓할 필요는 없어요. 불안이나 우울이 지속되면 의료진에게 도움을 요청하세요. 산책, 명상, 가벼운 요가도 좋아요.</p>
     <div class="highlight">💡 <strong>아빠 태교:</strong> 아빠 목소리는 낮은 주파수라 자궁을 더 잘 통과해요. 매일 배에 대고 이야기해주세요!</div>
   </div>
 
@@ -227,6 +251,7 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
+  <div class="card"><p>의학 정보 참고: <a href="https://www.acog.org/womens-health/faqs/healthy-eating-during-pregnancy">ACOG 임신 중 영양</a> · <a href="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/10/guidelines-for-diagnostic-imaging-during-pregnancy-and-lactation">임신 중 영상검사 지침</a>. 개인별 증상과 검사·복용 계획은 담당 의료진에게 확인하세요.</p></div>
   <div class="nav-bottom">
     <a href="index.html" class="nav-btn">🗓️ 출산 예정일 계산기</a>
     <a href="week.html" class="nav-btn">👶 주차별 발달</a>
@@ -239,5 +264,6 @@
   renderInsurance('m-ins-guide', 8);
   renderNutrients('m-nutrients');
 </script>
+<div style="text-align:center;font-size:12px;padding:12px"><a href="/analytics-info.html">방문 통계 안내·설정</a></div>
 </body>
 </html>

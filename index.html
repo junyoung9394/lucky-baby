@@ -123,9 +123,41 @@
     footer { text-align: center; padding: 40px 0 20px; color: var(--text-dim); font-size: 12px; line-height: 2; border-top: 1px solid var(--border); margin-top: 40px; }
 
     @media(max-width:480px) { .info-grid{grid-template-columns:1fr 1fr} .tool-grid{grid-template-columns:1fr 1fr} .card{padding:20px 16px} }
+
+    /* SIDE ADS (desktop) */
+    .side-ad { position: fixed; top: 50%; transform: translateY(-50%); width: 160px; z-index: 50; display: none; }
+    .side-ad-left { left: calc(50% - 360px - 175px); }
+    .side-ad-right { right: calc(50% - 360px - 175px); }
+    @media (min-width: 1120px) { .side-ad { display: block; } }
+
+    /* BOTTOM STICKY AD (mobile/tablet) */
+    .bottom-sticky-ad { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--border); z-index: 200; display: flex; justify-content: center; align-items: center; padding: 4px 0 4px; min-height: 60px; }
+    .bottom-sticky-close { position: absolute; top: 4px; right: 10px; background: none; border: none; color: var(--text-dim); font-size: 18px; cursor: pointer; line-height: 1; padding: 2px 4px; }
+    .bottom-sticky-close:hover { color: var(--text-muted); }
+    @media (min-width: 1120px) { .bottom-sticky-ad { display: none; } }
+    body { padding-bottom: 70px; }
+    @media (min-width: 1120px) { body { padding-bottom: 0; } }
   </style>
+<script defer src="/site-analytics.js"></script>
 </head>
 <body>
+
+<!-- 양쪽 사이드 광고 (데스크탑) -->
+<div class="side-ad side-ad-left">
+  <ins class="adsbygoogle" style="display:block;width:160px;height:600px" data-ad-client="ca-pub-8518556382646891" data-ad-slot="2806114975" data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="side-ad side-ad-right">
+  <ins class="adsbygoogle" style="display:block;width:160px;height:600px" data-ad-client="ca-pub-8518556382646891" data-ad-slot="3101206986" data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- 하단 고정 광고 (모바일) -->
+<div class="bottom-sticky-ad" id="bottomStickyAd">
+  <button class="bottom-sticky-close" onclick="document.getElementById('bottomStickyAd').style.display='none'; document.body.style.paddingBottom='0'">✕</button>
+  <ins class="adsbygoogle" style="display:block;width:320px;height:50px" data-ad-client="ca-pub-8518556382646891" data-ad-slot="9202415241" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <nav>
   <div class="nav-inner">
@@ -230,7 +262,7 @@
       <div class="info-item">
         <span class="info-icon">💊</span>
         <div class="info-title">필수 영양제</div>
-        <div class="info-desc">엽산: 12주까지 필수<br>비타민D: 한국인 부족<br>철분: 16주 이후부터<br>오메가3: 식물성 권장</div>
+        <div class="info-desc">엽산: 임신 전부터 준비<br>철분·비타민D: 상태에 맞춰 상담<br>추가 영양제: 필요성과 용량 확인</div>
       </div>
       <div class="info-item">
         <span class="info-icon">💳</span>
@@ -251,7 +283,7 @@
     <div id="faq">
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">출산 예정일은 어떻게 계산하나요? <span class="faq-arrow">▾</span></div>
-        <div class="faq-a">산부인과에서 사용하는 표준 방식(LMP)으로, 마지막 생리 시작일에서 280일(40주)을 더해 계산합니다. 실제 출산은 예정일 전후 2주 사이가 정상 범위예요.</div>
+        <div class="faq-a">산부인과에서 사용하는 표준 방식(LMP)으로, 마지막 생리 시작일에서 280일(40주)을 더해 계산합니다. 생리 주기와 초음파 검사 결과에 따라 의료진이 예정일을 조정할 수 있어요. 예정일은 추정치이며 출산 시기와 관리는 담당 의료진과 상의하세요.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">임신 초기 증상은 언제부터 나타나나요? <span class="faq-arrow">▾</span></div>
@@ -259,7 +291,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">엽산은 언제까지 먹어야 하나요? <span class="faq-arrow">▾</span></div>
-        <div class="faq-a">임신을 계획 중이라면 최소 3개월 전부터, 임신 후에는 12주까지 복용하는 것이 표준입니다. 신경관 결손 예방에 필수적이에요. 일부 의사는 전 기간 복용을 권장하기도 합니다.</div>
+        <div class="faq-a">임신 전부터 엽산을 준비하는 것이 좋고 임신 중에도 충분한 섭취가 필요합니다. 12주가 지났다고 임의로 중단하기보다 산전 비타민과 식사를 포함한 복용량을 담당 의료진과 상의하세요.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">산후조리원 예약은 언제 해야 하나요? <span class="faq-arrow">▾</span></div>
@@ -320,7 +352,8 @@ function calculate() {
   const lmpVal = document.getElementById('lmp-date').value;
   if (!lmpVal) { alert('마지막 생리 시작일을 선택해주세요.'); return; }
 
-  const lmp = new Date(lmpVal);
+  const [year, month, day] = lmpVal.split('-').map(Number);
+  const lmp = new Date(year, month - 1, day);
   const today = new Date();
   today.setHours(0,0,0,0);
 
@@ -330,8 +363,9 @@ function calculate() {
   const diffMs = due - today;
   const diffDays = Math.round(diffMs / (1000*60*60*24));
 
-  const weeksPast = Math.floor((today - lmp) / (1000*60*60*24*7));
-  const daysPast = Math.floor(((today - lmp) / (1000*60*60*24)) % 7);
+  const elapsedDays = Math.round((Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(year, month - 1, day)) / 86400000);
+  const weeksPast = Math.floor(elapsedDays / 7);
+  const daysPast = elapsedDays % 7;
 
   const dueStr = `${due.getFullYear()}.${String(due.getMonth()+1).padStart(2,'0')}.${String(due.getDate()).padStart(2,'0')}`;
 
@@ -375,8 +409,10 @@ function toggleFaq(el) {
 
 // 오늘 날짜로 max 설정
 const lmpInput = document.getElementById('lmp-date');
-lmpInput.max = new Date().toISOString().split('T')[0];
+const localToday = new Date();
+lmpInput.max = [localToday.getFullYear(), String(localToday.getMonth() + 1).padStart(2, '0'), String(localToday.getDate()).padStart(2, '0')].join('-');
 lmpInput.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
 </script>
+<div style="text-align:center;font-size:12px;padding:12px"><a href="/analytics-info.html">방문 통계 안내·설정</a></div>
 </body>
 </html>
