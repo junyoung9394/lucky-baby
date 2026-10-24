@@ -1,8 +1,12 @@
 name: Update RSS lastBuildDate
 
+# lastBuildDate는 "실제 콘텐츠(*.html)가 마지막으로 바뀐 날짜"로 맞춘다.
+# 매일 날짜만 올리면 내용 변화 없이 피드가 갱신된 것처럼 보이므로,
+# 콘텐츠가 바뀌지 않았다면 rss.xml도 바뀌지 않고 커밋도 생기지 않는다.
 on:
-  schedule:
-    - cron: '0 15 * * *'  # 매일 자정 KST (UTC 15:00)
+  push:
+    branches: [master, main]
+    paths: ['**.html']
   workflow_dispatch:
 
 permissions:
@@ -13,16 +17,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Update lastBuildDate
+      - name: Set lastBuildDate to last content change
         run: |
-          TODAY=$(TZ=Asia/Seoul date '+%a, %d %b %Y 00:00:00 +0900')
-          sed -i "s|<lastBuildDate>.*</lastBuildDate>|<lastBuildDate>${TODAY}</lastBuildDate>|" rss.xml
+          TS=$(git log -1 --format=%ct -- '*.html')
+          [ -n "$TS" ] || exit 0
+          DATE=$(TZ=Asia/Seoul LC_ALL=C date -d "@$TS" '+%a, %d %b %Y 00:00:00 +0900')
+          sed -i "s|<lastBuildDate>.*</lastBuildDate>|<lastBuildDate>${DATE}</lastBuildDate>|" rss.xml
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add rss.xml
-          git diff --cached --quiet || git commit -m "chore: RSS lastBuildDate 자동 업데이트"
+          git diff --cached --quiet || git commit -m "chore: RSS lastBuildDate를 최근 콘텐츠 변경일로 갱신"
           git push
