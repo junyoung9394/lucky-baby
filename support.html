@@ -134,7 +134,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">육아휴직 급여는 얼마나 받나요? <span class="faq-arrow">▾</span></div>
-        <div class="faq-a">2024년부터 육아휴직 급여가 대폭 인상됐어요. 첫 3개월은 통상임금의 100%(월 최대 250만원), 이후 3개월은 80%(월 최대 150만원), 나머지 기간은 50%(월 최대 120만원)입니다.</div>
+        <div class="faq-a">2025년 개편 이후 육아휴직 급여는 첫 3개월 통상임금의 100%(월 최대 250만원), 4~6개월 100%(월 최대 200만원), 7개월부터 80%(월 최대 160만원)이며 하한은 월 70만원이에요. 사후지급금 제도가 없어져 휴직 중에 전액 받습니다.</div>
       </div>
     </div>
   </div>
@@ -162,9 +162,9 @@ const items = [
   { key:'happy',   name:'국민행복카드 (임신바우처)', desc:'단태아 100만원 (다태아 140만원)', calc: s => 100 },
   { key:'birth',   name:'출산 지원금 (지자체)', desc:'지역마다 다름 (평균 50~200만원)', calc: s => s.child===1?100:s.child===2?200:300 },
   { key:'nurse',   name:'산모신생아 건강관리 서비스', desc:'가정방문 서비스 (소득에 따라 최대 240만원)', calc: s => 150 },
-  { key:'leave',   name:'육아휴직 급여 ★', desc: s => s.leave==='no' ? '미사용' : s.work==='both' ? '부부 각각 최대 1,920만원 — 급여에 따라 달라요' : '1인 최대 1,920만원 — 급여에 따라 달라요', calc: s => {
+  { key:'leave',   name:'육아휴직 급여 ★', desc: s => s.leave==='no' ? '미사용' : s.work==='both' ? '부부 각각 최대 2,310만원 — 급여에 따라 달라요' : '1인 최대 2,310만원 — 급여에 따라 달라요', calc: s => {
     if(s.leave==='no') return 0;
-    const perPerson = 1920; // 첫 3개월 250×3 + 다음 3개월 150×3 + 나머지 6개월 120×6
+    const perPerson = 2310; // 첫 3개월 250×3 + 4~6개월 200×3 + 7~12개월 160×6 (2025년 개편 기준)
     return s.work==='both' ? perPerson * 2 : perPerson;
   }},
 ];
